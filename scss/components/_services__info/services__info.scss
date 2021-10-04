@@ -1,0 +1,44 @@
+﻿.services {
+    @extend %display_flex;
+    margin-bottom: 100px;
+
+    .services__content,
+    .services__excerpt {
+        width: 50%;
+        margin-top: 110px;
+    }
+
+    .services__excerpt {
+        p {
+            margin: 30px 50px 30px 0;
+            text-align: justify;
+        }
+
+        .services__button {
+            @extend %button;
+            border-color: $main_colour;
+            color: $main_colour;
+            border: solid 2px $main_colour;
+            background-color: transparent;
+        }
+    }
+
+    .services__content {
+        display: flex;
+        flex-wrap: wrap;
+
+        .services__content__item {
+            width: 50%;
+
+            img,
+            h3 {
+                margin: 20px 0;
+            }
+
+            p {
+                margin-right: 35px;
+                text-align: justify;
+            }
+        }
+    }
+}

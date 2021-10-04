@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+header .navigation ul li a:hover {
+  background-color: #ff3f40;
+  color: white;
+}
+
+.services, .organisation__info .organisation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.services .services__excerpt .services__button, .organisation__info .organisation .organisation__info__block .organisation__info__contact_us {
+  padding: 20px 40px;
+  text-align: center;
+  border-style: none;
+  border-radius: 5px;
+  font: 22px;
+  font-weight: bold;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+header {
+  background-color: #f6f2f2;
+}
+header .navigation {
+  background-color: #313030;
+}
+header .navigation ul {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  margin: 30px 0 0 0;
+}
+header .navigation ul li {
+  display: inline-block;
+  padding: 47px 25px;
+  text-transform: uppercase;
+  font-size: 26px;
+  list-style: none;
+  height: 100%;
+}
+header .navigation ul li a {
+  color: white;
+  text-decoration: none;
+  height: 100%;
+  padding: 47px 25px;
+}
+.organisation__info {
+  background-color: #f6f2f2;
+}
+.organisation__info .organisation {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 110px;
+}
+.organisation__info .organisation .organisation__info__block {
+  width: 50%;
+}
+.organisation__info .organisation .organisation__info__block h1 {
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 55px;
+}
+.organisation__info .organisation .organisation__info__block p {
+  margin-top: 20px;
+  padding-bottom: 65px;
+  text-align: justify;
+}
+.organisation__info .organisation .organisation__info__block .organisation__info__contact_us {
+  background-color: #ff3f40;
+  color: white;
+}
+.organisation__info .organisation .organisation__info__video {
+  width: 50%;
+  padding-left: 75px;
+}
+
+.services {
+  margin-bottom: 100px;
+}
+.services .services__content,
+.services .services__excerpt {
+  width: 50%;
+  margin-top: 110px;
+}
+.services .services__excerpt p {
+  margin: 30px 50px 30px 0;
+  text-align: justify;
+}
+.services .services__excerpt .services__button {
+  border-color: #ff3f40;
+  color: #ff3f40;
+  border: solid 2px #ff3f40;
+  background-color: transparent;
+}
+.services .services__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.services .services__content .services__content__item {
+  width: 50%;
+}
+.services .services__content .services__content__item img,
+.services .services__content .services__content__item h3 {
+  margin: 20px 0;
+}
+.services .services__content .services__content__item p {
+  margin-right: 35px;
+  text-align: justify;
+}
+
+/*# sourceMappingURL=style.css.map */
