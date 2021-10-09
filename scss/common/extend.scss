@@ -17,3 +17,21 @@
     font: 22px;
     font-weight: bold;
 }
+
+%headline_paddings {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+%subscription_text {
+    text-align: center;
+    color: white;
+}
+
+%line_maincolour {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    background-color: $main_colour;
+}

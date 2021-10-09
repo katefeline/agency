@@ -4,14 +4,13 @@
     .organisation {
         @extend %display_flex;
         width: 100%;
-        padding-top: 100px;
-        padding-bottom: 110px;
+        @extend %headline_paddings;
 
         .organisation__info__block {
             width: 50%;
 
             h1 {
-                font-size: 60px;
+                font-size: 40px;
                 font-weight: bold;
                 letter-spacing: 1px;
                 line-height: 55px;

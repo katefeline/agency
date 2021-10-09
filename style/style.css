@@ -78,7 +78,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
-header .navigation ul li a:hover {
+.header .navigation ul li a:hover {
   background-color: #ff3f40;
   color: white;
 }
@@ -89,13 +89,31 @@ header .navigation ul li a:hover {
   justify-content: space-between;
 }
 
-.services .services__excerpt .services__button, .organisation__info .organisation .organisation__info__block .organisation__info__contact_us {
+.contact .contact__block .contact__form .contact__button, .subscription .subscription__content .subscription__form .subscription__button, .services .services__excerpt .services__button, .organisation__info .organisation .organisation__info__block .organisation__info__contact_us {
   padding: 20px 40px;
   text-align: center;
   border-style: none;
   border-radius: 5px;
   font: 22px;
   font-weight: bold;
+}
+
+.team__headline h1, .organisation__info .organisation {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.subscription .subscription__content p, .subscription .subscription__content h1 {
+  text-align: center;
+  color: white;
+}
+
+.contact .contact__heading:after, .team__headline:after, .product .product__headline:after {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 2px;
+  background-color: #ff3f40;
 }
 
 body {
@@ -111,20 +129,21 @@ h1 {
   text-transform: uppercase;
 }
 
-header {
+.header {
   background-color: #f6f2f2;
+  padding-top: 30px;
 }
-header .navigation {
+.header .navigation {
   background-color: #313030;
 }
-header .navigation ul {
+.header .navigation ul {
   display: flex;
   justify-content: center;
   height: 100%;
   padding: 0;
   margin: 30px 0 0 0;
 }
-header .navigation ul li {
+.header .navigation ul li {
   display: inline-block;
   padding: 47px 25px;
   text-transform: uppercase;
@@ -132,7 +151,7 @@ header .navigation ul li {
   list-style: none;
   height: 100%;
 }
-header .navigation ul li a {
+.header .navigation ul li a {
   color: white;
   text-decoration: none;
   height: 100%;
@@ -143,14 +162,12 @@ header .navigation ul li a {
 }
 .organisation__info .organisation {
   width: 100%;
-  padding-top: 100px;
-  padding-bottom: 110px;
 }
 .organisation__info .organisation .organisation__info__block {
   width: 50%;
 }
 .organisation__info .organisation .organisation__info__block h1 {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: bold;
   letter-spacing: 1px;
   line-height: 55px;
@@ -167,6 +184,55 @@ header .navigation ul li a {
 .organisation__info .organisation .organisation__info__video {
   width: 50%;
   padding-left: 75px;
+}
+
+.product .product__headline {
+  text-align: center;
+}
+.product .product__headline h2 {
+  margin: 100px 0 20px;
+  text-transform: uppercase;
+}
+.product .product__headline:before {
+  content: "";
+  display: inline-block;
+  width: 1250px;
+  margin: 0 auto;
+  height: 2px;
+  background-color: #f6f2f2;
+}
+.product .product__headline p {
+  margin-bottom: 25px;
+}
+.product .product__navigation {
+  margin-top: 60px;
+}
+.product .product__navigation ul {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+.product .product__navigation ul li {
+  list-style: none;
+}
+.product .product__navigation ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #313030;
+  font-size: 18px;
+  padding-left: 35px;
+}
+.product .product__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product .product__gallery .product__img {
+  width: calc(25% - 20px);
+  background-color: #f5f0dd;
+  height: 290px;
+  border: transparent;
+  margin: 0 10px 10px 0;
 }
 
 .services {
@@ -201,6 +267,177 @@ header .navigation ul li a {
 .services .services__content .services__content__item p {
   margin-right: 35px;
   text-align: justify;
+}
+
+.team__headline p {
+  margin-left: 20px;
+}
+.team__headline:after {
+  margin-left: 20px;
+}
+
+.team__img {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team__img .team__img__selected {
+  border: transparent;
+  margin: 40px 40px 0 20px;
+  width: 25%;
+  height: 400px;
+  background-color: #f5f0dd;
+}
+.team__img .team__img__sidebar {
+  width: calc(75% - 60px);
+}
+.team__img .team__img__sidebar .team__selected__info {
+  margin-top: 40px;
+}
+.team__img .team__img__sidebar .team__selected__info h3 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.team__img .team__img__sidebar .team__selected__info p {
+  margin-bottom: 20px;
+}
+.team__img .team__img__sidebar .team__selected__info .team__selected__reference a {
+  text-decoration: none;
+  padding-right: 20px;
+  font-style: italic;
+  color: black;
+}
+.team__img .team__img__sidebar .team__not__selected {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team__img .team__img__sidebar .team__not__selected .team__not__selected__img {
+  border: transparent;
+  margin: 30px 0 0 15px;
+  width: 23%;
+  height: 255px;
+  background-color: #f5f0dd;
+}
+.team__img .team__img__sidebar .team__not__selected .team__not__selected__img p {
+  display: none;
+  font-weight: bold;
+  text-align: center;
+}
+.team__img .team__img__sidebar .team__not__selected .team__not__selected__img:hover {
+  background-color: #313030;
+  opacity: 10%;
+  transition: 0.3s;
+}
+.team__img .team__img__sidebar .team__not__selected .team__not__selected__img:hover p {
+  display: block;
+}
+.team__img .team__img__sidebar .team__not__selected .team__not__selected__img:first-child {
+  margin-left: 0;
+}
+
+.subscription {
+  background-color: #f5f0dd;
+  margin-top: 100px;
+}
+.subscription .subscription__content p {
+  margin: 30px 0;
+}
+.subscription .subscription__content .subscription__form {
+  text-align: center;
+}
+.subscription .subscription__content .subscription__form .subscription__email input {
+  padding: 20px 40px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font: 22px;
+  margin-bottom: 70px;
+}
+.subscription .subscription__content .subscription__form .subscription__button {
+  background-color: #ff3f40;
+  color: white;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.contact .contact__heading {
+  width: 50%;
+  margin-bottom: 50px;
+}
+.contact .contact__heading h2 {
+  margin: 100px 0 50px;
+  text-transform: uppercase;
+}
+.contact .contact__heading p {
+  text-align: justify;
+  margin-bottom: 50px;
+}
+.contact .contact__block {
+  display: flex;
+}
+.contact .contact__block .contact__form {
+  width: 50%;
+}
+.contact .contact__block .contact__form input {
+  background-color: #e5e5e5;
+  border-style: none;
+  border-radius: 5px;
+  padding: 20px 50px;
+  margin-right: 50px;
+  width: calc(50% - 40px);
+  outline: none;
+}
+.contact .contact__block .contact__form [type=text] {
+  margin-right: 50px;
+}
+.contact .contact__block .contact__form [type=email] {
+  margin-right: 0;
+  float: right;
+}
+.contact .contact__block .contact__form textarea {
+  margin: 30px 0;
+  background-color: #e5e5e5;
+  width: 100%;
+  resize: none;
+  height: 300px;
+}
+.contact .contact__block .contact__form .contact__button {
+  background-color: #ff3f40;
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+}
+.contact .contact__block .contact__info {
+  width: 50%;
+  background-color: #313030;
+  color: white;
+  margin-left: 50px;
+  padding: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  background-color: #313030;
+  margin-top: 50px;
+}
+footer .footer {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+footer .footer h4 {
+  font-weight: 200;
+  margin: 30px 0;
+}
+footer .footer .footer__navigation nav ul {
+  display: flex;
+}
+footer .footer .footer__navigation nav ul li {
+  list-style: none;
+  padding-left: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

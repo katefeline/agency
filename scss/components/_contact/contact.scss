@@ -1,0 +1,80 @@
+.contact {
+
+
+  .contact__heading {
+    width: 50%;
+    margin-bottom: 50px;
+
+    h2 {
+      margin: 100px 0 50px;
+      text-transform: uppercase;
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 50px;
+    }
+
+    &:after {
+      @extend %line_maincolour;
+    }
+  }
+
+  .contact__block {
+    display: flex;
+
+    .contact__form {
+      width: 50%;
+
+      input {
+        background-color: $contact_form_bg;
+        border-style: none;
+        border-radius: 5px;
+        padding: 20px 50px;
+        margin-right: 50px;
+        width: calc(50% - 40px);
+        outline: none;
+      }
+
+      [type="text"] {
+        margin-right: 50px;
+      }
+
+      [type="email"] {
+        margin-right: 0;
+        float: right;
+      }
+
+      textarea {
+        margin: 30px 0;
+        background-color: $contact_form_bg;
+        width: 100%;
+        resize: none;
+        height: 300px;
+      }
+
+      .contact__button {
+        @extend %button;
+        background-color: $main_colour;
+        color: white;
+        text-transform: uppercase;
+        width: 100%;
+      }
+    }
+
+    .contact__info {
+      width: 50%;
+      background-color: $hover_colour;
+      color: white;
+      margin-left: 50px;
+      padding: 0 50px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
+  }
+
+}
