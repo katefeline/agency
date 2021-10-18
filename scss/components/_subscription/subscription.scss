@@ -1,16 +1,17 @@
 .subscription {
   background-color: $additional_colour;
-  margin-top: 100px;
+  padding: 100px 0;
 
   .subscription__content {
 
     h1 {
       @extend %subscription_text;
+      padding-bottom: 40px;
     }
 
     p {
-      margin: 30px 0;
       @extend %subscription_text;
+      padding-bottom: 60px;
     }
 
     .subscription__form {
@@ -22,15 +23,17 @@
         border: none;
         border-radius: 5px;
         font: 22px;
-        margin-bottom: 70px;
       }
 
       .subscription__button {
         @extend %button;
-        background-color: $main_colour;
-        color: white;
+        @include button(white, $main_colour, solid);
         text-transform: uppercase;
         margin-left: 20px;
+
+        &:hover {
+          @include button_hover($main_colour, white, solid 2px $main_colour);
+        }
       }
     }
 

@@ -13,17 +13,22 @@
     }
 
     .footer__navigation {
+      display: flex;
+      align-items: center;
 
       nav {
+
         ul  {
+          @extend %ul;
           display: flex;
+          align-items: center;
 
           li {
             list-style: none;
             padding-left: 20px;
 
             a {
-
+              display: inline;
             }
           }
         }

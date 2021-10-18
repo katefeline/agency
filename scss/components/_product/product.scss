@@ -26,12 +26,12 @@
   }
   
   .product__navigation {
-    margin-top: 60px;
+    padding: 60px 0 40px;
 
     ul {
+      @extend %ul;
       display: flex;
       justify-content: center;
-      padding-left: 0;
 
       li {
         list-style: none;
@@ -40,8 +40,13 @@
           text-decoration: none;
           text-transform: uppercase;
           color: $hover_colour;
-          font-size: 18px;
+          font-size: 22px;
           padding-left: 35px;
+          display: inline;
+
+          &:hover {
+            color: $main_colour;
+          }
 
         }
       }

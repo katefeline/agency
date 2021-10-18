@@ -98,7 +98,7 @@ select {
   font-weight: bold;
 }
 
-.team__headline h1, .organisation__info .organisation {
+.team .team__headline h1, .organisation__info .organisation {
   padding-top: 100px;
   padding-bottom: 50px;
 }
@@ -108,12 +108,17 @@ select {
   color: white;
 }
 
-.contact .contact__heading:after, .team__headline:after, .product .product__headline:after {
+.contact .contact__heading:after, .team .team__headline:after, .product .product__headline:after {
   content: "";
   display: inline-block;
   width: 100px;
   height: 2px;
   background-color: #ff3f40;
+}
+
+footer .footer .footer__navigation nav ul, .product .product__navigation ul, .header .navigation ul {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -127,6 +132,12 @@ body {
 
 h1 {
   text-transform: uppercase;
+  font-size: 32px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .header {
@@ -140,14 +151,12 @@ h1 {
   display: flex;
   justify-content: center;
   height: 100%;
-  padding: 0;
-  margin: 30px 0 0 0;
 }
 .header .navigation ul li {
   display: inline-block;
   padding: 47px 25px;
   text-transform: uppercase;
-  font-size: 26px;
+  font-size: 14px;
   list-style: none;
   height: 100%;
 }
@@ -156,6 +165,7 @@ h1 {
   text-decoration: none;
   height: 100%;
   padding: 47px 25px;
+  display: inline;
 }
 .organisation__info {
   background-color: #f6f2f2;
@@ -164,13 +174,13 @@ h1 {
   width: 100%;
 }
 .organisation__info .organisation .organisation__info__block {
-  width: 50%;
+  max-width: 500px;
 }
 .organisation__info .organisation .organisation__info__block h1 {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
   letter-spacing: 1px;
-  line-height: 55px;
+  line-height: 65px;
 }
 .organisation__info .organisation .organisation__info__block p {
   margin-top: 20px;
@@ -178,8 +188,14 @@ h1 {
   text-align: justify;
 }
 .organisation__info .organisation .organisation__info__block .organisation__info__contact_us {
-  background-color: #ff3f40;
   color: white;
+  background-color: #ff3f40;
+  border: solid;
+}
+.organisation__info .organisation .organisation__info__block .organisation__info__contact_us:hover {
+  color: #ff3f40;
+  background-color: transparent;
+  border: solid 2px #ff3f40;
 }
 .organisation__info .organisation .organisation__info__video {
   width: 50%;
@@ -205,12 +221,11 @@ h1 {
   margin-bottom: 25px;
 }
 .product .product__navigation {
-  margin-top: 60px;
+  padding: 60px 0 40px;
 }
 .product .product__navigation ul {
   display: flex;
   justify-content: center;
-  padding-left: 0;
 }
 .product .product__navigation ul li {
   list-style: none;
@@ -219,8 +234,12 @@ h1 {
   text-decoration: none;
   text-transform: uppercase;
   color: #313030;
-  font-size: 18px;
+  font-size: 22px;
   padding-left: 35px;
+  display: inline;
+}
+.product .product__navigation ul li a:hover {
+  color: #ff3f40;
 }
 .product .product__gallery {
   display: flex;
@@ -236,22 +255,29 @@ h1 {
 }
 
 .services {
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 .services .services__content,
 .services .services__excerpt {
-  width: 50%;
   margin-top: 110px;
+  width: 50%;
+}
+.services .services__excerpt {
+  max-width: 510px;
 }
 .services .services__excerpt p {
   margin: 30px 50px 30px 0;
   text-align: justify;
 }
 .services .services__excerpt .services__button {
-  border-color: #ff3f40;
   color: #ff3f40;
-  border: solid 2px #ff3f40;
   background-color: transparent;
+  border: solid 2px #ff3f40;
+}
+.services .services__excerpt .services__button:hover {
+  color: white;
+  background-color: #ff3f40;
+  border: solid;
 }
 .services .services__content {
   display: flex;
@@ -267,79 +293,95 @@ h1 {
 .services .services__content .services__content__item p {
   margin-right: 35px;
   text-align: justify;
+  font-size: 16px;
 }
 
-.team__headline p {
+.team {
+  padding-bottom: 100px;
+}
+.team .team__headline {
+  max-width: 450px;
+}
+.team .team__headline h1 {
   margin-left: 20px;
 }
-.team__headline:after {
+.team .team__headline p {
   margin-left: 20px;
 }
-
-.team__img {
+.team .team__headline:after {
+  margin-left: 20px;
+}
+.team .team__img {
   display: flex;
   flex-wrap: wrap;
 }
-.team__img .team__img__selected {
+.team .team__img .team__img__selected {
   border: transparent;
   margin: 40px 40px 0 20px;
   width: 25%;
   height: 400px;
   background-color: #f5f0dd;
 }
-.team__img .team__img__sidebar {
+.team .team__img .team__img__sidebar {
   width: calc(75% - 60px);
 }
-.team__img .team__img__sidebar .team__selected__info {
+.team .team__img .team__img__sidebar .team__selected__info {
   margin-top: 40px;
+  max-width: 650px;
 }
-.team__img .team__img__sidebar .team__selected__info h3 {
+.team .team__img .team__img__sidebar .team__selected__info h3 {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.team__img .team__img__sidebar .team__selected__info p {
+.team .team__img .team__img__sidebar .team__selected__info p {
   margin-bottom: 20px;
 }
-.team__img .team__img__sidebar .team__selected__info .team__selected__reference a {
+.team .team__img .team__img__sidebar .team__selected__info .team__selected__reference a {
   text-decoration: none;
   padding-right: 20px;
   font-style: italic;
   color: black;
 }
-.team__img .team__img__sidebar .team__not__selected {
+.team .team__img .team__img__sidebar .team__not__selected {
   display: flex;
   flex-wrap: wrap;
 }
-.team__img .team__img__sidebar .team__not__selected .team__not__selected__img {
+.team .team__img .team__img__sidebar .team__not__selected .team__not__selected__img {
   border: transparent;
   margin: 30px 0 0 15px;
   width: 23%;
   height: 255px;
   background-color: #f5f0dd;
+  position: relative;
 }
-.team__img .team__img__sidebar .team__not__selected .team__not__selected__img p {
-  display: none;
+.team .team__img .team__img__sidebar .team__not__selected .team__not__selected__img p {
+  opacity: 0;
   font-weight: bold;
   text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
-.team__img .team__img__sidebar .team__not__selected .team__not__selected__img:hover {
-  background-color: #313030;
-  opacity: 10%;
-  transition: 0.3s;
+.team .team__img .team__img__sidebar .team__not__selected .team__not__selected__img p:hover {
+  opacity: 100%;
+  background-color: #ccc;
+  color: white;
+  height: 15%;
 }
-.team__img .team__img__sidebar .team__not__selected .team__not__selected__img:hover p {
-  display: block;
-}
-.team__img .team__img__sidebar .team__not__selected .team__not__selected__img:first-child {
+.team .team__img .team__img__sidebar .team__not__selected .team__not__selected__img:first-child {
   margin-left: 0;
 }
 
 .subscription {
   background-color: #f5f0dd;
-  margin-top: 100px;
+  padding: 100px 0;
+}
+.subscription .subscription__content h1 {
+  padding-bottom: 40px;
 }
 .subscription .subscription__content p {
-  margin: 30px 0;
+  padding-bottom: 60px;
 }
 .subscription .subscription__content .subscription__form {
   text-align: center;
@@ -350,21 +392,29 @@ h1 {
   border: none;
   border-radius: 5px;
   font: 22px;
-  margin-bottom: 70px;
 }
 .subscription .subscription__content .subscription__form .subscription__button {
-  background-color: #ff3f40;
   color: white;
+  background-color: #ff3f40;
+  border: solid;
   text-transform: uppercase;
   margin-left: 20px;
 }
+.subscription .subscription__content .subscription__form .subscription__button:hover {
+  color: #ff3f40;
+  background-color: white;
+  border: solid 2px #ff3f40;
+}
 
+.contact {
+  padding-top: 100px;
+}
 .contact .contact__heading {
-  width: 50%;
+  max-width: 625px;
   margin-bottom: 50px;
 }
 .contact .contact__heading h2 {
-  margin: 100px 0 50px;
+  margin-bottom: 50px;
   text-transform: uppercase;
 }
 .contact .contact__heading p {
@@ -399,12 +449,24 @@ h1 {
   width: 100%;
   resize: none;
   height: 300px;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 10px 20px;
+}
+.contact .contact__block .contact__form textarea:focus, .contact .contact__block .contact__form textarea:active, .contact .contact__block .contact__form textarea:hover {
+  border-color: transparent;
 }
 .contact .contact__block .contact__form .contact__button {
-  background-color: #ff3f40;
   color: white;
+  background-color: #ff3f40;
+  border: solid;
   text-transform: uppercase;
   width: 100%;
+}
+.contact .contact__block .contact__form .contact__button:hover {
+  color: #ff3f40;
+  background-color: transparent;
+  border: solid 2px #ff3f40;
 }
 .contact .contact__block .contact__info {
   width: 50%;
@@ -432,12 +494,20 @@ footer .footer h4 {
   font-weight: 200;
   margin: 30px 0;
 }
+footer .footer .footer__navigation {
+  display: flex;
+  align-items: center;
+}
 footer .footer .footer__navigation nav ul {
   display: flex;
+  align-items: center;
 }
 footer .footer .footer__navigation nav ul li {
   list-style: none;
   padding-left: 20px;
+}
+footer .footer .footer__navigation nav ul li a {
+  display: inline;
 }
 
 /*# sourceMappingURL=style.css.map */

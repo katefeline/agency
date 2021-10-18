@@ -1,20 +1,25 @@
-.team__headline {
+.team {
+  padding-bottom: 100px;
 
-  h1 {
-    @extend %headline_paddings;
+  .team__headline {
+    max-width: 450px;
+
+    h1 {
+      @extend %headline_paddings;
+      margin-left: 20px;
+    }
+
+    p {
+      margin-left: 20px;
+    }
+
+    &:after {
+      @extend %line_maincolour;
+      margin-left: 20px;
+    }
   }
 
-  p {
-    margin-left: 20px;
-  }
-
-  &:after {
-    @extend %line_maincolour;
-    margin-left: 20px;
-  }
-}
-
-.team__img {
+  .team__img {
     display: flex;
     flex-wrap: wrap;
 
@@ -31,6 +36,7 @@
 
       .team__selected__info {
         margin-top: 40px;
+        max-width: 650px;
 
         h3 {
           text-transform: uppercase;
@@ -61,23 +67,26 @@
           width: 23%;
           height: 255px;
           background-color: $additional_colour;
+          position: relative;
 
 
           p {
-            display: none;
+            opacity: 0;
             font-weight: bold;
             text-align: center;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
           }
 
-          &:hover {
-            background-color: $hover_colour;
-            opacity: 10%;
-            transition: 0.3s;
-
-            p {
-              display: block;
-            }
+          p:hover {
+            opacity: 100%;
+            background-color: #ccc;
+            color: white;
+            height: 15%;
           }
+
         }
 
         .team__not__selected__img:first-child {
@@ -87,3 +96,6 @@
       }
     }
   }
+
+}
+
