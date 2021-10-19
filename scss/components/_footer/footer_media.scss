@@ -1,3 +1,16 @@
-﻿body
-{
+﻿@media (max-width: $breakpointMd) {
+footer {
+  .wrapper {
+    width: 100%;
+  }
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .footer__navigation {
+      margin: 15px 0;
+    }
+  }
+}
 }

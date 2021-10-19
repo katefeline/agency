@@ -1,0 +1,19 @@
+@media (max-width: $breakpointMd) {
+  .subscription {
+    .subscription__content {
+      .subscription__form {
+        .subscription__email {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          width: 100%;
+
+          .subscription__button {
+            margin: 15px 0;
+          }
+        }
+
+      }
+    }
+  }
+}

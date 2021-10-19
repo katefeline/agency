@@ -1,5 +1,91 @@
-﻿
+﻿@media(max-width: $containerWidth) {
+  .organisation__info {
+    .organisation {
+      width: 100%;
+
+      .organisation__info__block,
+      .organisation__info__video {
+        width: 50%;
+      }
+
+      .organisation__info__video {
+        padding-left: 60px;
+
+        iframe {
+          width: 435px;
+        }
+      }
+    }
+  }
+}
 
 
+@media (max-width: $breakpointLg) {
+  .organisation__info {
+    .organisation {
+      padding-top: 15px;
+      flex-direction: column;
+
+      .organisation__info__block,
+      .organisation__info__video {
+        width: 100%;
+        text-align: center;
+      }
+
+      .organisation__info__block {
+        max-width: $breakpointMd;
+
+        p {
+          padding-bottom: 20px;
+        }
+
+        .organisation__info__contact_us {
+          padding-bottom: 20px;
+        }
+
+      }
+      .organisation__info__video {
+        padding-left: 15px;
 
 
+        iframe {
+          width: 650px;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: $breakpointMd) {
+  .organisation__info {
+    .organisation {
+      padding-top: 15px;
+      flex-direction: column;
+      width: 100%;
+
+      .organisation__info__block {
+        width: 100%;
+        text-align: center;
+
+        p {
+          padding: 15px;
+        }
+
+        .organisation__info__contact_us {
+          margin-bottom: 15px;
+        }
+      }
+
+      .organisation__info__video {
+        padding-left: 15px;
+
+        iframe {
+          width: 450px;
+        }
+      }
+
+    }
+  }
+
+}

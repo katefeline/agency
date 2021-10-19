@@ -1,1 +1,60 @@
-﻿
+﻿@media (max-width: $breakpointLg) {
+.services__info {
+  .services {
+    padding-bottom: 0;
+    justify-content: space-evenly;
+    .services__content {
+      flex-direction: column;
+
+      .services__content__item {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+}
+
+@media (max-width: $breakpointMd) {
+.services__info {
+  .services {
+    .services__content,
+    .services__excerpt {
+      margin-top: 50px;
+      width: 100%;
+      text-align: center;
+
+      p {
+        font-size: 30px;
+        margin: 0 15px;
+      }
+    }
+
+    .services__excerpt {
+      .services__button {
+        margin-top: 15px;
+      }
+    }
+
+    .services__content {
+      .services__content__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        img {
+          width: 15%;
+        }
+      }
+    }
+  }
+}
+}
+

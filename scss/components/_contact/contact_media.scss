@@ -1,0 +1,41 @@
+@media (max-width: $breakpointLg) {
+.contact {
+  padding: 50px 15px;
+}
+}
+
+@media (max-width: $breakpointMd) {
+.contact {
+  padding: 50px 15px;
+  .contact__heading {
+    text-align: center;
+
+    &:after {
+      width: 80%;
+    }
+  }
+
+  .contact__block {
+    flex-wrap: wrap;
+
+    .contact__form {
+      width: 100%;
+    }
+
+    .contact__info {
+      width: $breakpointLg;
+      margin: 15px 0;
+      padding: 0;
+
+      h4 {
+        font-size: 30px;
+        padding-bottom: 15px;
+      }
+
+      p {
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+}
